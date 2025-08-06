@@ -1,0 +1,273 @@
+/* Fuente consola */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* Fondo con textura suave */
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #FADADD;
+    color: #845A5A;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #C85A7C !important;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #FADADD !important;
+}
+
+.navbar-nav .nav-link {
+    color: #FADADD !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #E8AEB7 !important;
+}
+
+/* Header */
+header {
+    background-color: #E4A0B7;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    width: 0;
+    animation: typing 3s steps(20, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 14ch
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+/* Secciones */
+section {
+    background-color: transparent;
+}
+
+/* Tarjetas de proyectos */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(200, 90, 124, 0.2);
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.card-title {
+    color: #C85A7C;
+}
+
+.card-text {
+    color: #845A5A;
+}
+
+.card .btn-primary {
+    background-color: #E8AEB7;
+    border: none;
+    color: #fff;
+}
+
+.card .btn-primary:hover {
+    background-color: #C85A7C;
+}
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before,
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.btn-primary:hover::before {
+    top: 0;
+    animation: glitchTop 0.3s linear infinite;
+}
+
+.btn-primary:hover::after {
+    bottom: 0;
+    animation: glitchBottom 0.3s linear infinite;
+}
+
+@keyframes glitchTop {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-2px);
+    }
+
+    40% {
+        transform: translateY(2px);
+    }
+
+    60% {
+        transform: translateY(-2px);
+    }
+
+    80% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(2px);
+    }
+
+    40% {
+        transform: translateY(-2px);
+    }
+
+    60% {
+        transform: translateY(2px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+.azulejo-pixel {
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
+    opacity: 70%;
+    background-color: #FADADD;
+}
+
+/* Sobre mí */
+#sobre-mi strong {
+    color: #C85A7C;
+}
+
+#sobre-mi p {
+    margin-bottom: 1rem;
+}
+
+/* Contacto */
+.section-form {
+    background-color: #FADADD;
+}
+
+form input,
+form textarea {
+    border: 1px solid #E4A0B7;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+form .btn-dark {
+    background-color: #C85A7C;
+    border: none;
+    color: #fff;
+}
+
+form .btn-dark:hover {
+    background-color: #E4A0B7;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #E4A0B7;
+    opacity: 50%;
+}
+
+.custom-input {
+    border: 1px solid #E4A0B7;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    font-family: 'Fira Code', monospace;
+}
+
+.custom-input:focus {
+    border-color: #C85A7C !important;
+    box-shadow: 0 0 0 0.2rem rgba(200, 90, 124, 0.25) !important;
+    outline: none !important;
+    background-color: #fff;
+}
+
+.text-success-button {
+    color: #C85A7C;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    background-color: #C85A7C;
+    color: #FADADD;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
