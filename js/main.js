@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(response => {
       if (response.ok) {
+        console.log("Formulario interceptado");
         window.location.href = 'gracias.html';
       } else {
         alert('Ups, hubo un error enviando el formulario.');
