@@ -1,3 +1,6 @@
+
+console.log("Entro al main");
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (!form) return; // por si no está la página con formulario
