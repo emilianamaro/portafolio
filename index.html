@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Emi</title>
+    <meta name="description" content="Portafolio de Emi Amaro, desarrolladora web junior enfocada en front-end. Proyectos responsivos, accesibles y modernos.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -16,7 +17,7 @@
         <div class="container">
             <a class="navbar-brand" href="#" style="font-size: 1.8rem; color: #C85A7C;">Emiliana</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú de navegación" id="nav_btn">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -94,7 +95,7 @@
                     <div class="card">
                         <img src="assets/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
                         <div class="card-body">
-                            <h5 class="card-title">E-commerce</h5>
+                            <p class="card-title">E-commerce</p>
                             <p class="card-text lang-es">Tienda online desarrollada como proyecto final del curso de
                                 desarrollo
                                 web.</p>
@@ -118,6 +119,7 @@
                 <input type="hidden" name="_captcha" value="false">
 
                 <div class="input-group mb-3">
+                    <label for="name" class="visually-hidden" id="label_name">Nombre</label>
                     <span class="input-group-text bg-white border-0"><i class="bi bi-person-heart"
                             style="color: #b75d69;"></i></span>
                     <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Nombre"
@@ -125,6 +127,7 @@
                 </div>
 
                 <div class="input-group mb-3">
+                    <label for="email" class="visually-hidden" id="label_email">Email</label>
                     <span class="input-group-text bg-white border-0"><i class="bi bi-envelope-heart"
                             style="color: #b75d69;"></i></span>
                     <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Correo"
@@ -132,12 +135,13 @@
                 </div>
 
                 <div class="input-group mb-3">
+                    <label for="message" class="visually-hidden" id="label_msg">Mensaje</label>
                     <span class="input-group-text bg-white border-0"><i class="bi bi-chat-heart"
                             style="color: #b75d69;"></i></span>
                     <textarea class="form-control custom-input" id="message" name="message" rows="3" placeholder="Mensaje"
                         required></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark" id="send">Enviar</button>
+                <button type="submit" class="btn btn-dark" id="send" aria-label="Enviar">Enviar</button>
             </form>
         </div>
     </section>

@@ -31,29 +31,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    // Cambia el placeholder del campo "name"
+    // Cambia el placeholder del campo "name" y el label
     if (document.querySelector("#name")) {
       document.querySelector("#name").placeholder = placeholders[lang].name;
+      document.querySelector("#label_name").textContent = placeholders[lang].name;
     }
 
-    // Cambia el placeholder del campo "email"
+    // Cambia el placeholder del campo "email" y el label
     if (document.querySelector("#email")) {
       document.querySelector("#email").placeholder = placeholders[lang].email;
+      document.querySelector("#label_email").textContent = placeholders[lang].email;
     }
 
-    // Cambia el placeholder del campo "message"
+    // Cambia el placeholder del campo "message" y el label
     if (document.querySelector("#message")) {
       document.querySelector("#message").placeholder = placeholders[lang].message;
+      document.querySelector("#label_msg").textContent = placeholders[lang].message;
     }
 
-    // Cambia el texto del botón de envío según el idioma
+    // Cambia el texto de botones según el idioma
     if(document.querySelector("#send")){
       const btn = document.querySelector("#send");
       if(lang === "es"){
         btn.textContent = "Enviar";
+        btn.setAttribute("aria-label", "Enviar");
+        document.getElementById("nav_btn").setAttribute("aria-label", "Abrir menú de navegación");
       }
       if(lang === "en"){
         btn.textContent = "Send";
+        btn.setAttribute("aria-label", "Send");
+        document.getElementById("nav_btn").setAttribute("aria-label", "Open navigation menu");
       }
     }
 
