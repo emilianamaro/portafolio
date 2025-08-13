@@ -27,6 +27,29 @@ body {
 .navbar-nav .nav-link:hover {
     color: #E8AEB7 !important;
 }
+.lang-select {
+            width: auto;
+            min-width: 70px;
+            background-color: #f8dbe6;
+            border-color: #f3a8b5;
+            color: #6d3a47;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* En pantallas pequeñas, separarlo un poco más */
+        @media (max-width: 991px) {
+            .lang-select {
+                margin-top: 1rem;
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
 /* Header */
 header {

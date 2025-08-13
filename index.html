@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Emi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -13,23 +14,36 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><a class="navbar-brand" href="#"
-                    style="font-size: 1.8rem; color: #C85A7C;">Emiliana</a></a>
+            <a class="navbar-brand" href="#" style="font-size: 1.8rem; color: #C85A7C;">Emiliana</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link lang-es" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link lang-en" href="#sobre-mi">About me</a></li>
+                    <li class="nav-item"><a class="nav-link lang-es" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link lang-en" href="#proyectos">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link lang-es" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link lang-en" href="#contacto">Contact</a></li>
                 </ul>
+
+                <!-- Selector de idioma -->
+                <div class="ms-3 d-flex align-items-center">
+                    <select id="languageSelector" class="form-select form-select-sm lang-select" onchange="setLanguage(this.value)">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
 
     <header class="azulejo-pixel text-center p-5">
-        <h1 class="typewriter">Hola! Soy Emi</h1>
+        <h1 class="lang-es typewriter">Hola! Soy Emi</h1>
+        <h1 class="lang-en typewriter" style="display:none;">Hi! I`m Emi</h1>
     </header>
 
     <section id="sobre-mi" class="container py-5 fade-in-up">
@@ -39,18 +53,33 @@
                     style="max-width: 250px;">
             </div>
             <div class="col-md-8">
-                <p>
+                <p class="lang-es">
                     Desarrolladora web junior enfocada en el desarrollo front-end.
                     Me apasiona crear sitios accesibles, responsivos y bien diseñados, usando tecnologías como
                     <strong>HTML, CSS, JavaScript, Bootstrap y JSON</strong>.
                     Actualmente estoy aprendiendo <strong>React</strong> y tengo nociones básicas de
                     <strong>Node.js</strong>.
                 </p>
-                <p>
+                <p class="lang-en">
+                    Junior web developer focused on front-end development.
+                    I am passionate about creating accessible, responsive, and well-designed websites using technologies
+                    such as
+                    <strong>HTML, CSS, JavaScript, Bootstrap and JSON</strong>.
+                    Currently, I am learning <strong>React</strong> and have basic knowledge of
+                    <strong>Node.js</strong>.
+                </p>
+                <p class="lang-es">
                     Tengo experiencia previa en atención al cliente y resolución de problemas, lo cual me dio
                     una excelente base en comunicación, empatía y trabajo en equipo. Me encanta seguir aprendiendo,
                     y busco oportunidades para crecer en el mundo del desarrollo web aportando mi dedicación,
                     organización y creatividad.
+                </p>
+                <p class="lang-en">
+                    I have previous experience in customer service and problem-solving, which gave me
+                    an excellent foundation in communication, empathy, and teamwork. I love to keep learning,
+                    and I am looking for opportunities to grow in the web development field by contributing my
+                    dedication,
+                    organization, and creativity.
                 </p>
             </div>
         </div>
@@ -58,16 +87,21 @@
     <img src="assets/onda.svg" alt="onda decorativa" style="width: 100%;">
     <section id="proyectos" class="bg-light py-5 fade-in-up">
         <div class="container">
-            <h2>Proyectos</h2>
+            <h2 class="lang-es">Proyectos</h2>
+            <h2 class="lang-en">Projects</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <img src="assets/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
                         <div class="card-body">
                             <h5 class="card-title">E-commerce</h5>
-                            <p class="card-text">Tienda online desarrollada como proyecto final del curso de desarrollo
+                            <p class="card-text lang-es">Tienda online desarrollada como proyecto final del curso de
+                                desarrollo
                                 web.</p>
-                            <a href="#" class="btn btn-primary">Ver proyecto</a>
+                            <p class="card-text lang-en">Online store developed as the final project of the web
+                                development course.</p>
+                            <a href="#" class="btn btn-primary lang-es">Ver proyecto</a>
+                            <a href="#" class="btn btn-primary lang-en">View project</a>
                         </div>
                     </div>
                 </div>
@@ -78,32 +112,39 @@
     <img src="assets/onda.svg" alt="onda decorativa" style="width: 100%;">
     <section id="contacto" class="azulejo-pixel py-5 fade-in-up">
         <div class="container">
-            <h2>Contacto</h2>
+            <h2 class="lang-es">Contacto</h2>
+            <h2 class="lang-en">Contact</h2>
             <form id="contactForm" method="POST" action="https://formsubmit.co/emilianamaro@hotmail.com">
                 <input type="hidden" name="_captcha" value="false">
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text bg-white border-0"><i class="bi bi-person"></i></span>
-                    <input type="text" class="form-control custom-input" name="nombre" placeholder="Nombre" required>
+                    <span class="input-group-text bg-white border-0"><i class="bi bi-person-heart"
+                            style="color: #b75d69;"></i></span>
+                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Nombre"
+                        required>
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text bg-white border-0"><i class="bi bi-envelope"></i></span>
-                    <input type="email" class="form-control custom-input" name="email" placeholder="Correo" required>
+                    <span class="input-group-text bg-white border-0"><i class="bi bi-envelope-heart"
+                            style="color: #b75d69;"></i></span>
+                    <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Correo"
+                        required>
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text bg-white border-0"><i class="bi bi-chat-text"></i></span>
-                    <textarea class="form-control custom-input" name="mensaje" rows="3" placeholder="Mensaje"
+                    <span class="input-group-text bg-white border-0"><i class="bi bi-chat-heart"
+                            style="color: #b75d69;"></i></span>
+                    <textarea class="form-control custom-input" id="message" name="message" rows="3" placeholder="Mensaje"
                         required></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Enviar</button>
+                <button type="submit" class="btn btn-dark" id="send">Enviar</button>
             </form>
         </div>
     </section>
 
     <footer class="text-center text-white py-3">
-        <p>© 2025 Emiliana Amaro. Todos los derechos reservados.</p>
+        <p class="lang-es">© 2025 Emiliana Amaro. Todos los derechos reservados.</p>
+        <p class="lang-en">© 2025 Emiliana Amaro. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

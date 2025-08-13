@@ -1,0 +1,71 @@
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf1f7 url('https://www.transparenttextures.com/patterns/3px-tile.png');
+      background-repeat: repeat;
+      color: #b75d69;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .lang-select {
+            width: auto;
+            min-width: 70px;
+            background-color: #f8dbe6;
+            border-color: #f3a8b5;
+            color: #6d3a47;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* En pantallas pequeñas, separarlo un poco más */
+        @media (max-width: 991px) {
+            .lang-select {
+                margin-top: 1rem;
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    .container {
+      background: #fff0f5;
+      border-radius: 16px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 20px rgba(183, 93, 105, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #e49cab;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #d07c90;
+    }
