@@ -1,12 +1,9 @@
-/* =======================
-   Fuente y estilo global
-   ======================= */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 body {
     font-family: 'Fira Code', monospace;
-    background-color: #FADADD;
-    color: #845A5A;
+    background-color: #12001D;
+    color: #E0E0E0;
     line-height: 1.6;
 }
 
@@ -14,33 +11,30 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* =======================
-   Navbar
-   ======================= */
 .navbar {
-    background-color: #C85A7C !important;
+    background-color: #2A003F !important;
 }
 
 .navbar-brand {
     font-size: 1.8rem;
-    color: #FADADD !important;
+    color: #FF4F87 !important;
 }
 
 .navbar-nav .nav-link {
-    color: #FADADD !important;
+    color: #F8F8F2 !important;
+    */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #E8AEB7 !important;
+    color: #BB86FC !important;
 }
 
-/* Selector de idioma */
 .lang-select {
     width: auto;
     min-width: 70px;
-    background-color: #f8dbe6;
-    border-color: #f3a8b5;
-    color: #6d3a47;
+    background-color: #2A003F;
+    border-color: #BB86FC;
+    color: #FF4F87;
     font-weight: bold;
     border-radius: 8px;
 }
@@ -58,12 +52,9 @@ body {
     }
 }
 
-/* =======================
-   Header
-   ======================= */
 header {
-    background-color: #E4A0B7;
-    color: white;
+    background-color: #1A0B2E;
+    color: #FF4F87;
 }
 
 header h1 {
@@ -72,10 +63,11 @@ header h1 {
 }
 
 .typewriter {
+    color: #FF4F87;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid #fff;
-    width: 0;
+    border-right: 2px solid #FF4F87;
+    width: 0ch;
     animation: typing 3s steps(20, end) forwards, blink 0.75s step-end infinite;
 }
 
@@ -85,7 +77,7 @@ header h1 {
     }
 
     to {
-        width: 14ch;
+        width: 13ch;
     }
 }
 
@@ -95,34 +87,29 @@ header h1 {
     }
 }
 
-/* =======================
-   Secciones
-   ======================= */
 section {
     background-color: transparent;
+    scroll-margin-top: 100px;
 }
 
-/* =======================
-   Tarjetas de proyectos
-   ======================= */
 .card {
     border: none;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(200, 90, 124, 0.2);
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.2);
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    background-color: #1E012F;
 }
 
 .card-title {
-    color: #C85A7C;
+    color: #FF4F87;
 }
 
 .card-text {
-    color: #845A5A;
+    color: #E0E0E0;
 }
 
-/* Botones de tarjeta */
 .card .btn-primary {
-    background-color: #E8AEB7;
+    background-color: #BB86FC;
     border: none;
     color: #fff;
     position: relative;
@@ -131,7 +118,7 @@ section {
 }
 
 .card .btn-primary:hover {
-    background-color: #C85A7C;
+    background-color: #FF4F87;
 }
 
 .btn-primary::before,
@@ -146,65 +133,6 @@ section {
     pointer-events: none;
 }
 
-.btn-primary:hover::before {
-    top: 0;
-    animation: glitchTop 0.3s linear infinite;
-}
-
-.btn-primary:hover::after {
-    bottom: 0;
-    animation: glitchBottom 0.3s linear infinite;
-}
-
-@keyframes glitchTop {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    20% {
-        transform: translateY(-2px);
-    }
-
-    40% {
-        transform: translateY(2px);
-    }
-
-    60% {
-        transform: translateY(-2px);
-    }
-
-    80% {
-        transform: translateY(2px);
-    }
-}
-
-@keyframes glitchBottom {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    20% {
-        transform: translateY(2px);
-    }
-
-    40% {
-        transform: translateY(-2px);
-    }
-
-    60% {
-        transform: translateY(2px);
-    }
-
-    80% {
-        transform: translateY(-2px);
-    }
-}
-
-/* Hover general */
 button,
 a {
     transition: all 0.3s ease;
@@ -213,87 +141,77 @@ a {
 button:hover,
 a:hover {
     transform: scale(1.05);
-    background-color: #d4a373;
-    /* tono cálido */
+    background-color: #FF6F61;
     color: #fff;
 }
 
-/* =======================
-   Fondo con patrón
-   ======================= */
 .azulejo-pixel {
     background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
     opacity: 70%;
-    background-color: #FADADD;
+    background-color: #12001D;
 }
 
-/* =======================
-   Sobre mí
-   ======================= */
 #sobre-mi strong {
-    color: #C85A7C;
+    color: #FF4F87;
 }
 
 #sobre-mi p {
     margin-bottom: 1rem;
 }
 
-/* =======================
-   Formulario / Contacto
-   ======================= */
 .section-form {
-    background-color: #FADADD;
+    background-color: #1A0B2E;
 }
 
 form input,
 form textarea,
 .custom-input {
-    border: 1px solid #E4A0B7;
+    border: 1px solid #BB86FC;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #2A003F;
+    color: #F8F8F2;
     transition: all 0.3s ease;
     font-family: 'Fira Code', monospace;
 }
 
 .custom-input:focus {
-    border-color: #C85A7C !important;
-    box-shadow: 0 0 0 0.2rem rgba(200, 90, 124, 0.25) !important;
+    border-color: #FF4F87 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 79, 135, 0.25) !important;
     outline: none !important;
-    background-color: #fff;
+    background-color: #2A003F;
+    color: #fff;
 }
 
 form .btn-dark {
-    background-color: #C85A7C;
+    background-color: #FF4F87;
     border: none;
     color: #fff;
 }
 
 form .btn-dark:hover {
-    background-color: #E4A0B7;
-    color: #845A5A;
+    background-color: #BB86FC;
+    color: #12001D;
 }
 
 .form-control::placeholder {
-    color: #E4A0B7;
+    color: #BB86FC;
     opacity: 0.7;
+}
+.input-group-text {
+    background-color: transparent;
+    border: 0;
 }
 
 .text-success-button {
-    color: #C85A7C;
+    color: #FF4F87;
     text-align: center;
 }
 
-/* =======================
-   Footer
-   ======================= */
 footer {
-    background-color: #C85A7C;
-    color: #FADADD;
+    background-color: #2A003F;
+    color: #F8F8F2;
 }
 
-/* =======================
-   Animaciones Fade
-   ======================= */
 .fade-in,
 .fade-in-up {
     opacity: 0;
@@ -307,33 +225,39 @@ footer {
     transform: translateY(0);
 }
 
-/* =======================
-   Media Queries / Responsive
-   ======================= */
 @media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
         font-size: 1.2rem;
     }
 
+    h3 {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
     .section {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .proyecto {
         margin: 1rem 0;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
     }
 
     .proyectos-container {
@@ -342,10 +266,45 @@ footer {
         gap: 1rem;
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+    
     input,
     textarea,
     button {
         width: 100%;
         font-size: 1rem;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .lang-select {
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    #languageSelector option {
+        font-size: 0.9rem !important;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler.collapsed {
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(0);
     }
 }

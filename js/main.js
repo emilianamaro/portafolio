@@ -134,3 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Cierra el navbar al hacer clic en cualquier link
+document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+    });
+});
