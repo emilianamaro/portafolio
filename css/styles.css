@@ -1,7 +1,8 @@
-/* Fuente consola */
+/* =======================
+   Fuente y estilo global
+   ======================= */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-/* Fondo con textura suave */
 body {
     font-family: 'Fira Code', monospace;
     background-color: #FADADD;
@@ -9,8 +10,13 @@ body {
     line-height: 1.6;
 }
 
+* {
+    transition: all 0.3s ease-in-out;
+}
 
-/* Navbar */
+/* =======================
+   Navbar
+   ======================= */
 .navbar {
     background-color: #C85A7C !important;
 }
@@ -27,31 +33,34 @@ body {
 .navbar-nav .nav-link:hover {
     color: #E8AEB7 !important;
 }
+
+/* Selector de idioma */
 .lang-select {
-            width: auto;
-            min-width: 70px;
-            background-color: #f8dbe6;
-            border-color: #f3a8b5;
-            color: #6d3a47;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+    width: auto;
+    min-width: 70px;
+    background-color: #f8dbe6;
+    border-color: #f3a8b5;
+    color: #6d3a47;
+    font-weight: bold;
+    border-radius: 8px;
+}
 
-        /* En pantallas pequeñas, separarlo un poco más */
-        @media (max-width: 991px) {
-            .lang-select {
-                margin-top: 1rem;
-                margin-left: 0;
-                width: 100%;
-            }
+@media (max-width: 991px) {
+    .lang-select {
+        margin-top: 1rem;
+        margin-left: 0;
+        width: 100%;
+    }
 
-            .navbar-collapse {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
-/* Header */
+/* =======================
+   Header
+   ======================= */
 header {
     background-color: #E4A0B7;
     color: white;
@@ -72,27 +81,30 @@ header h1 {
 
 @keyframes typing {
     from {
-        width: 0
+        width: 0;
     }
 
     to {
-        width: 14ch
+        width: 14ch;
     }
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent
+        border-color: transparent;
     }
 }
 
-
-/* Secciones */
+/* =======================
+   Secciones
+   ======================= */
 section {
     background-color: transparent;
 }
 
-/* Tarjetas de proyectos */
+/* =======================
+   Tarjetas de proyectos
+   ======================= */
 .card {
     border: none;
     border-radius: 16px;
@@ -108,20 +120,18 @@ section {
     color: #845A5A;
 }
 
+/* Botones de tarjeta */
 .card .btn-primary {
     background-color: #E8AEB7;
     border: none;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .card .btn-primary:hover {
     background-color: #C85A7C;
-}
-
-.btn-primary {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
 }
 
 .btn-primary::before,
@@ -147,7 +157,9 @@ section {
 }
 
 @keyframes glitchTop {
-    0% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -165,15 +177,13 @@ section {
 
     80% {
         transform: translateY(2px);
-    }
-
-    100% {
-        transform: translateY(0);
     }
 }
 
 @keyframes glitchBottom {
-    0% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -192,23 +202,34 @@ section {
     80% {
         transform: translateY(-2px);
     }
-
-    100% {
-        transform: translateY(0);
-    }
 }
 
-* {
-    transition: all 0.3s ease-in-out;
+/* Hover general */
+button,
+a {
+    transition: all 0.3s ease;
 }
 
+button:hover,
+a:hover {
+    transform: scale(1.05);
+    background-color: #d4a373;
+    /* tono cálido */
+    color: #fff;
+}
+
+/* =======================
+   Fondo con patrón
+   ======================= */
 .azulejo-pixel {
     background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
     opacity: 70%;
     background-color: #FADADD;
 }
 
-/* Sobre mí */
+/* =======================
+   Sobre mí
+   ======================= */
 #sobre-mi strong {
     color: #C85A7C;
 }
@@ -217,34 +238,15 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Contacto */
+/* =======================
+   Formulario / Contacto
+   ======================= */
 .section-form {
     background-color: #FADADD;
 }
 
 form input,
-form textarea {
-    border: 1px solid #E4A0B7;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-form .btn-dark {
-    background-color: #C85A7C;
-    border: none;
-    color: #fff;
-}
-
-form .btn-dark:hover {
-    background-color: #E4A0B7;
-    color: #fff;
-}
-
-.form-control::placeholder {
-    color: #E4A0B7;
-    opacity: 50%;
-}
-
+form textarea,
 .custom-input {
     border: 1px solid #E4A0B7;
     border-radius: 8px;
@@ -260,37 +262,90 @@ form .btn-dark:hover {
     background-color: #fff;
 }
 
+form .btn-dark {
+    background-color: #C85A7C;
+    border: none;
+    color: #fff;
+}
+
+form .btn-dark:hover {
+    background-color: #E4A0B7;
+    color: #845A5A;
+}
+
+.form-control::placeholder {
+    color: #E4A0B7;
+    opacity: 0.7;
+}
+
 .text-success-button {
     color: #C85A7C;
     text-align: center;
 }
 
-
-/* Footer */
+/* =======================
+   Footer
+   ======================= */
 footer {
     background-color: #C85A7C;
     color: #FADADD;
 }
 
-.fade-in {
+/* =======================
+   Animaciones Fade
+   ======================= */
+.fade-in,
+.fade-in-up {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
+.fade-in.visible,
 .fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* =======================
+   Media Queries / Responsive
+   ======================= */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .proyecto {
+        margin: 1rem 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .proyectos-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

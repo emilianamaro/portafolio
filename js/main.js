@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
   // ---------- Idioma ----------
   function setLanguage(lang) {
     // Guarda el idioma elegido en el almacenamiento local del navegador
     localStorage.setItem('language', lang);
+
+    const selector = document.getElementById('languageSelector');
+    if (selector) {
+      selector.value = lang; // usamos el idioma actual
+    }
 
     // Verifica si el idioma seleccionado es español
     const showEs = (lang === 'es');
@@ -50,31 +55,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Cambia el texto de botones según el idioma
-    if(document.querySelector("#send")){
+    if (document.querySelector("#send")) {
       const btn = document.querySelector("#send");
-      if(lang === "es"){
+      if (lang === "es") {
         btn.textContent = "Enviar";
         btn.setAttribute("aria-label", "Enviar");
         document.getElementById("nav_btn").setAttribute("aria-label", "Abrir menú de navegación");
+        document.getElementById("title_web").textContent = "Emiliana Amaro | Desarrolladora Web";
       }
-      if(lang === "en"){
+      if (lang === "en") {
         btn.textContent = "Send";
         btn.setAttribute("aria-label", "Send");
         document.getElementById("nav_btn").setAttribute("aria-label", "Open navigation menu");
+        document.getElementById("title_web").textContent = "Emiliana Amaro | Web Developer";
       }
     }
 
-    //Cambia texto de la página de agradecimiento
-    if(document.querySelector("#title")){
+    // Cambia texto de la página de agradecimiento
+    if (document.querySelector("#title")) {
       const title = document.querySelector("#title");
       const msgText = document.querySelector("#message_thank");
       const btnBackHome = document.querySelector("#back_home");
-      if(lang === "es"){
+      if (lang === "es") {
         title.textContent = "¡Gracias por contactarme!";
         msgText.textContent = "Tu mensaje fue recibido y me pondré en contacto contigo pronto.";
         btnBackHome.textContent = "Volver al inicio";
       }
-      if(lang === "en"){
+      if (lang === "en") {
         title.textContent = "Thank you for contacting me!";
         msgText.textContent = "Your message has been received and I will get in touch with you soon.";
         btnBackHome.textContent = "Back to home";
@@ -89,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Maneja el selector de idioma
   const selector = document.getElementById('languageSelector');
   if (selector) {
-    // Oculta el selector en la página "gracias.html"
+    // Oculta el selector en la página "contact_confirmation.html"
     if (window.location.pathname.includes('contact_confirmation.html')) {
       selector.style.display = 'none';
     } else {
@@ -104,30 +111,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
-      // Evita que el formulario recargue la página
       e.preventDefault();
 
       try {
-        // Toma los datos del formulario
         const formData = new FormData(form);
 
-        // Envía los datos al servidor usando Fetch API
         const resp = await fetch(form.action, {
           method: form.method || 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
         });
 
-        // Si la respuesta es correcta, redirige a "gracias.html"
         if (resp.ok) {
           console.log("Formulario enviado correctamente");
           window.location.href = 'contact_confirmation.html';
         } else {
-          // Si hay error en la respuesta, muestra alerta
           alert('Ups, hubo un error enviando el formulario.');
         }
       } catch (err) {
-        // Si ocurre un error en la conexión, muestra alerta
         alert('Ups, hubo un error enviando el formulario.');
       }
     });
