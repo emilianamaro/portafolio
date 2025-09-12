@@ -109,7 +109,7 @@ section {
 }
 
 .card img:hover {
-    filter: grayscale(0%) brightness(100%); /* vuelve a color completo al pasar el mouse */
+    filter: grayscale(0%) brightness(100%);
 }
 .card-title {
     color: #FF4F87;
