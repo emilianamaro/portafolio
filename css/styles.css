@@ -104,12 +104,12 @@ section {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    filter: grayscale(50%) brightness(50%);
+    filter: grayscale(50%) brightness(50%) !important;
     transition: filter 0.3s ease;
 }
 
 .card img:hover {
-    filter: grayscale(0%) brightness(100%);
+    filter: grayscale(0%) brightness(100%) !important;
 }
 .card-title {
     color: #FF4F87;
