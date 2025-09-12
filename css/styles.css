@@ -100,6 +100,17 @@ section {
     background-color: #1E012F;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(50%) brightness(50%);
+    transition: filter 0.3s ease;
+}
+
+.card img:hover {
+    filter: grayscale(0%) brightness(100%); /* vuelve a color completo al pasar el mouse */
+}
 .card-title {
     color: #FF4F87;
 }
